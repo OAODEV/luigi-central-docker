@@ -1,0 +1,18 @@
+*.pyc
+build/
+dist/
+*.egg-info
+
+# Apple weirdness and such
+.DS_Store
+*.swp
+
+# Working experiment code
+junk_drawer/
+# Files for
+reference/
+warehouse-etl-secret.yml
+
+luigi-state.pickle
+.dockerignore
+
