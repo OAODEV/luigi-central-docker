@@ -19,4 +19,5 @@ chmod 777 /tmp/luigi-interface.log
 ln -s /tmp/luigi-interface.log /oao-warehouse-etl/log
 tail -f /tmp/luigi-interface.log &
 
+export TERM=xterm
 exec $@

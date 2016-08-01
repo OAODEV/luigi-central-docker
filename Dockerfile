@@ -1,4 +1,4 @@
-FROM alpine:edge
+FROM alpine
 MAINTAINER thomas.yager-madden@adops.com
 
 RUN apk update && \
