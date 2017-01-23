@@ -7,10 +7,11 @@ python3 \
 python3-dev \
 build-base \
 libffi-dev \
-postgresql-dev
+postgresql-dev \
+git
 
 RUN pip3 install --upgrade pip \
-luigi \
+git+https://github.com/spotify/luigi.git \
 psycopg2 \
 requests \
 SQLAlchemy \
