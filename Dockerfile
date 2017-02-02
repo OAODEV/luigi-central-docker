@@ -11,11 +11,11 @@ postgresql-dev \
 git
 
 RUN pip3 install --upgrade pip \
-git+https://github.com/spotify/luigi.git \
-psycopg2 \
-requests \
-SQLAlchemy \
-pyopenssl
+luigi==2.5.0 \
+psycopg2==2.6.2 \
+requests==2.12.5 \
+SQLAlchemy==1.1.5 \
+pyopenssl==16.2.0
 
 RUN rm -rf /var/cache/apk/* && rm -rf /tmp/*
 
