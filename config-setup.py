@@ -24,5 +24,6 @@ def main():
     else:
         shutil.copyfile('/oao-warehouse-etl/luigi.cfg', '/etc/luigi/luigi.cfg')
 
+
 if __name__ == '__main__':
     main()
