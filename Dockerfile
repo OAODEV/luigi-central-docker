@@ -1,17 +1,14 @@
-FROM alpine
+FROM python:3-alpine
 MAINTAINER thomas.yager-madden@adops.com
 
 RUN apk update && \
 apk add --update musl \
-python3 \
-python3-dev \
 build-base \
 libffi-dev \
-postgresql-dev \
-git
+postgresql-dev
 
 RUN pip3 install --upgrade pip \
-luigi==2.5.0 \
+luigi==2.6.1 \
 psycopg2==2.6.2 \
 requests==2.12.5 \
 SQLAlchemy==1.1.5 \

@@ -20,10 +20,7 @@ dependencies:
   override:
     - echo "The build name is in here!!!" us.gcr.io/lexical-cider-93918/$herd_service_name:$herd_build_tag
     - docker build -t us.gcr.io/lexical-cider-93918/$herd_service_name:$herd_build_tag .
-    - if [ ! -d ~/google-cloud-sdk ]; then curl https://sdk.cloud.google.com | bash; fi
-    - ~/google-cloud-sdk/bin/gcloud components update preview
-  cache_directories:
-    - ~/google-cloud-sdk
+    - sudo /opt/google-cloud-sdk/bin/gcloud --quiet components update
 
 test:
   override:
@@ -34,4 +31,4 @@ deployment:
     branch: /.*/
     commands:
       - echo $gcloud_key | base64 --decode > gcloud.json; gcloud auth activate-service-account $gcloud_email --key-file gcloud.json; ssh-keygen -f ~/.ssh/google_compute_engine -N ""
-      - gcloud docker push us.gcr.io/lexical-cider-93918/$herd_service_name:$herd_build_tag
+      - gcloud docker -- push us.gcr.io/lexical-cider-93918/$herd_service_name:$herd_build_tag
