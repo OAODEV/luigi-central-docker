@@ -8,8 +8,8 @@ libffi-dev \
 postgresql-dev
 
 RUN pip3 install --upgrade pip \
-luigi==2.6.1 \
-psycopg2==2.6.2 \
+luigi==2.6.2 \
+psycopg2==2.7.1 \
 requests==2.12.5 \
 SQLAlchemy==1.1.5 \
 pyopenssl==16.2.0
