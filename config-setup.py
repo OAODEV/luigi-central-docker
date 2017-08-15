@@ -17,7 +17,7 @@ def main():
         config['scheduler']['record_task_history'] = 'True'
         config['task_history'] = {}
         config['task_history']['db_connection'] = ('postgresql://etl_user:%s'
-                                                   '@pg-warehouse:5433/'
+                                                   '@schubert-pgbouncer:6432/'
                                                    'warehouse' % pgpasswd)
         with open('/etc/luigi/luigi.cfg', 'w') as cf:
             config.write(cf)
