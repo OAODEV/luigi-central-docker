@@ -11,8 +11,8 @@
 ### [etl-dfp](https://github.com/OAODEV/etl-dfp)
 * Luigi version: [visible here](https://github.com/OAODEV/etl-dfp/blob/master/requirements.txt#L3)
 
-### [etl-iadops-mart](https://github.com/OAODEV/etl-iadops-mart)
-* Luigi version: [visible here](https://github.com/OAODEV/etl-iadops-mart/blob/master/Dockerfile#L15)
+### [etl-schubert-mart](https://github.com/OAODEV/etl-schubert-mart)
+* Luigi version: [visible here](https://github.com/OAODEV/etl-schubert-mart/blob/master/Dockerfile#L15)
 
 ### [etl-openx](https://github.com/OAODEV/etl-openx)
 * Luigi version: [visible here](https://github.com/OAODEV/etl-openx/blob/master/Dockerfile#L15)
