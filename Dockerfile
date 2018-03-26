@@ -1,5 +1,5 @@
 FROM python:3.6.2-alpine3.6
-MAINTAINER thomas.yager-madden@adops.com
+LABEL maintainer="thomas.yager-madden@adops.com"
 
 RUN apk add --no-cache musl \
 build-base \
@@ -11,8 +11,6 @@ luigi==2.7.1 \
 psycopg2==2.7.3.1 \
 SQLAlchemy==1.1.5 \
 pyopenssl==17.2.0
-
-RUN rm -rf /var/cache/apk/* && rm -rf /tmp/*
 
 ADD . /luigi-central
 WORKDIR /luigi-central
