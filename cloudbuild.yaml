@@ -1,0 +1,4 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'us.gcr.io/$PROJECT_ID/luigi-central:_build.$SHORT_SHA', '.']
+images: ['us.gcr.io/$PROJECT_ID/luigi-central:_build.$SHORT_SHA']
