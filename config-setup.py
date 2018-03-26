@@ -12,7 +12,7 @@ def main():
         smtp_passwd = os.getenv('GMAILPASSWD')
 
         config = ConfigParser()
-        config.read_file(open('/oao-warehouse-etl/luigi.cfg'))
+        config.read_file(open('/luigi-central/luigi.cfg'))
         config['core']['smtp_password'] = smtp_passwd
         config['scheduler']['record_task_history'] = 'True'
         config['task_history'] = {}
@@ -22,7 +22,7 @@ def main():
         with open('/etc/luigi/luigi.cfg', 'w') as cf:
             config.write(cf)
     else:
-        shutil.copyfile('/oao-warehouse-etl/luigi.cfg', '/etc/luigi/luigi.cfg')
+        shutil.copyfile('/luigi-central/luigi.cfg', '/etc/luigi/luigi.cfg')
 
 
 if __name__ == '__main__':
