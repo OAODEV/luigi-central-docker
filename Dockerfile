@@ -1,5 +1,5 @@
-FROM python:3.6.2-alpine3.6
-LABEL maintainer="thomas.yager-madden@adops.com"
+FROM python:3.7.3-alpine3.9
+LABEL maintainer="henry.rizzi@adops.com"
 
 RUN apk add --no-cache musl \
 build-base \
@@ -7,10 +7,10 @@ libffi-dev \
 postgresql-dev
 
 RUN pip3 install --upgrade pip \
-luigi==2.7.1 \
-psycopg2==2.7.3.1 \
-SQLAlchemy==1.1.5 \
-pyopenssl==17.2.0
+luigi==2.8.7 \
+psycopg2==2.8.3 \
+SQLAlchemy==1.3.5 \
+pyopenssl==19.0.0
 
 ADD . /luigi-central
 WORKDIR /luigi-central
