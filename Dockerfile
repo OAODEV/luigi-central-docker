@@ -7,10 +7,10 @@ libffi-dev \
 postgresql-dev
 
 RUN pip3 install --upgrade pip \
-luigi==2.8.7 \
-psycopg2==2.8.3 \
-SQLAlchemy==1.3.5 \
-pyopenssl==19.0.0
+luigi==2.8.11 \
+psycopg2==2.8.4 \
+SQLAlchemy==1.3.12 \
+pyopenssl==19.1.0
 
 ADD . /luigi-central
 WORKDIR /luigi-central
