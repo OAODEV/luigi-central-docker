@@ -11,7 +11,7 @@ psycopg2==2.9.1 \
 SQLAlchemy==1.4.25 \
 pyopenssl==21.0.0
 
-ADD . /luigi-central
+COPY . /luigi-central
 WORKDIR /luigi-central
 
 EXPOSE 8082
