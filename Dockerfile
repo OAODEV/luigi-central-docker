@@ -1,4 +1,4 @@
-FROM python:3
+FROM python:3.10
 LABEL maintainer="henry.rizzi@adops.com"
 
 RUN apt-get update && apt-get install -y libffi-dev \
