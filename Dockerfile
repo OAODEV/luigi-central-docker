@@ -1,11 +1,11 @@
-FROM python:3.10
+FROM python:3.12
 LABEL maintainer="henry.rizzi@adops.com"
 
 RUN apt-get update && apt-get install -y libffi-dev \
 libxml2-dev \
 libxslt-dev && apt-get clean
 
-ADD . /luigi-central
+COPY . /luigi-central
 WORKDIR /luigi-central
 
 RUN pip3 install --upgrade pip pipenv
